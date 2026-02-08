@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <Description>A vision program .</Description>
+        <VersionPrefix>4.1</VersionPrefix>
+        <Authors>Skyiah Technologies</Authors>
+        <TargetFramework>net8.0</TargetFramework>
+        <DebugType>portable</DebugType>
+        <PackageId>ChainFx</PackageId>
+        <LangVersion>12</LangVersion>
+        <Company>Skyiah</Company>
+        <PackageProjectUrl>https://github.com/skyiah/</PackageProjectUrl>
+        <PackageVersion>4.5</PackageVersion>
+        <Title>The ChainVision</Title>
+        <PackageLicenseUrl>Apache 2.0</PackageLicenseUrl>
+        <AssemblyVersion>4.5</AssemblyVersion>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <Configurations>Debug;Release</Configurations>
+        <Platforms>AnyCPU</Platforms>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <PlatformTarget>x64</PlatformTarget>
+        <WarningLevel>4</WarningLevel>
+        <DefineConstants>EN</DefineConstants>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <PlatformTarget>x64</PlatformTarget>
+    </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="MAVLink" Version="1.0.8" />
+      <PackageReference Include="Microsoft.ML.OnnxRuntime" Version="1.24.1" />
+      <PackageReference Include="SixLabors.ImageSharp" Version="3.1.12" />
+      <PackageReference Include="System.IO.Ports" Version="10.0.2" />
+    </ItemGroup>
+</Project>
